@@ -3,7 +3,7 @@ package org.romaninteligence.com;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class DecodeTest {
 
@@ -13,8 +13,8 @@ class DecodeTest {
         Decode decodeObj = new Decode();
         int key = 23;
         String expected = "THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG";
-        String stringtodecode ="QEB NRFZH YOLTK CLU GRJMP LSBO QEB IXWV ALD";
-        assertEquals(expected,decodeObj.decodeIt(stringtodecode,key));
+        String stringtodecode = "QEB NRFZH YOLTK CLU GRJMP LSBO QEB IXWV ALD";
+        assertEquals(expected, decodeObj.decodeIt(stringtodecode, key));
     }
 
     @Test
@@ -23,8 +23,8 @@ class DecodeTest {
         Decode decodeObj = new Decode();
         int key = 2;
         String expected = "HI";
-        String stringtodecode ="JK";
-        assertEquals(expected,decodeObj.decodeIt(stringtodecode,key));
+        String stringtodecode = "JK";
+        assertEquals(expected, decodeObj.decodeIt(stringtodecode, key));
     }
 
     @Test
@@ -33,8 +33,8 @@ class DecodeTest {
         Decode decodeObj = new Decode();
         int key = 20;
         String expected = "HI";
-        String stringtodecode ="BC";
-        assertEquals(expected,decodeObj.decodeIt(stringtodecode,key));
+        String stringtodecode = "BC";
+        assertEquals(expected, decodeObj.decodeIt(stringtodecode, key));
     }
 
     @Test
@@ -43,8 +43,8 @@ class DecodeTest {
         Decode decodeObj = new Decode();
         int key = 20;
         String expected = "hi";
-        String stringtodecode ="bc";
-        assertEquals(expected,decodeObj.decodeIt(stringtodecode,key));
+        String stringtodecode = "bc";
+        assertEquals(expected, decodeObj.decodeIt(stringtodecode, key));
     }
 
     @Test
@@ -53,7 +53,7 @@ class DecodeTest {
         Decode decodeObj = new Decode();
         int key = 2;
         String expected = "hi%lolo";
-        String stringtodecode ="jk%nqnq";
-        assertEquals(expected,decodeObj.decodeIt(stringtodecode,key));
+        String stringtodecode = "jk%nqnq";
+        assertEquals(expected, decodeObj.decodeIt(stringtodecode, key));
     }
 }

@@ -3,7 +3,7 @@ package org.romaninteligence.com;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class EncodeTest {
 
@@ -13,8 +13,8 @@ class EncodeTest {
         Encode encodeObj = new Encode();
         int key = 23;
         String stringtoEncode = "THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG";
-        String expectedEncoded ="QEB NRFZH YOLTK CLU GRJMP LSBO QEB IXWV ALD";
-        assertEquals(expectedEncoded,encodeObj.encodeIt(stringtoEncode,key));
+        String expectedEncoded = "QEB NRFZH YOLTK CLU GRJMP LSBO QEB IXWV ALD";
+        assertEquals(expectedEncoded, encodeObj.encodeIt(stringtoEncode, key));
     }
 
     @Test
@@ -23,8 +23,8 @@ class EncodeTest {
         Encode encodeObj = new Encode();
         int key = 2;
         String stringtoEncode = "HI";
-        String expectedEncoded ="JK";
-        assertEquals(expectedEncoded,encodeObj.encodeIt(stringtoEncode,key));
+        String expectedEncoded = "JK";
+        assertEquals(expectedEncoded, encodeObj.encodeIt(stringtoEncode, key));
     }
 
     @Test
@@ -33,8 +33,8 @@ class EncodeTest {
         Encode encodeObj = new Encode();
         int key = 20;
         String stringtoEncode = "HI";
-        String expectedEncoded ="BC";
-        assertEquals(expectedEncoded,encodeObj.encodeIt(stringtoEncode,key));
+        String expectedEncoded = "BC";
+        assertEquals(expectedEncoded, encodeObj.encodeIt(stringtoEncode, key));
     }
 
     @Test
@@ -43,8 +43,8 @@ class EncodeTest {
         Encode encodeObj = new Encode();
         int key = 20;
         String stringtoEncode = "hi";
-        String expectedEncoded ="bc";
-        assertEquals(expectedEncoded,encodeObj.encodeIt(stringtoEncode,key));
+        String expectedEncoded = "bc";
+        assertEquals(expectedEncoded, encodeObj.encodeIt(stringtoEncode, key));
     }
 
     @Test
@@ -53,8 +53,8 @@ class EncodeTest {
         Encode encodeObj = new Encode();
         int key = 2;
         String stringtoEncode = "hi%lolo";
-        String expectedEncoded ="jk%nqnq";
-        assertEquals(expectedEncoded,encodeObj.encodeIt(stringtoEncode,key));
+        String expectedEncoded = "jk%nqnq";
+        assertEquals(expectedEncoded, encodeObj.encodeIt(stringtoEncode, key));
     }
 
 }
