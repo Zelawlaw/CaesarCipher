@@ -20,8 +20,8 @@ public class Main {
                     case 0:
                         System.out.println("\nWould you like to encode or decode? press 'e' for encode and 'd' for decode." +
                                 "press x to exit");
-                        System.out.println("has next lines: "+in.hasNext());
-                      //  in.nextLine();
+                        System.out.println("has next lines: " + in.hasNext());
+                        //  in.nextLine();
                         String action = in.nextLine();
 
                         if (action.equalsIgnoreCase("e")) {
@@ -32,7 +32,7 @@ public class Main {
                             System.out.println("Exiting system. good bye!");
                             keepWorking = false;
                         } else {
-                            System.out.println("wrong input!"+action.length()+" here");
+                            System.out.println("wrong input!" + action.length() + " here");
                         }
                         break;
 
@@ -71,20 +71,20 @@ public class Main {
                         System.out.println(decodeObj.decodeIt());
                         stage = 0;
                         in.reset();
-                       break;
+                        break;
 
                 }
 
             } catch (Exception Ex) {
                 System.out.println("Exception " + Ex.getMessage() + " Occurred!\n");
                 System.out.println("Would you like to continue?\n press any key to continue and x to exit");
+                in.nextLine();
                 String command = in.nextLine();
-                if(command.equalsIgnoreCase("x")){
+                if (command.equalsIgnoreCase("x")) {
                     System.out.println("Good bye!");
                     keepWorking = false;
-                }
-                else {
-                    stage =0;
+                } else {
+                    stage = 0;
                 }
             }
 
