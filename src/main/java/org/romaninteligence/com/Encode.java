@@ -32,7 +32,6 @@ public class Encode {
             //mark lowercase flag
             boolean isLowerCase = Character.isLowerCase(varchar);
             varchar = isLowerCase? Character.toUpperCase(varchar) :varchar;
-            System.out.println(this.letterposition);
             int currentposition = varchar - 'A';
             int encodedposition = (currentposition + key) % 26;
             if(isLowerCase)
