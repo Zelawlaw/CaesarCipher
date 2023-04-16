@@ -14,7 +14,9 @@ class DecodeTest {
         int key = 23;
         String expected = "THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG";
         String stringtodecode = "QEB NRFZH YOLTK CLU GRJMP LSBO QEB IXWV ALD";
-        assertEquals(expected, decodeObj.decodeIt(stringtodecode, key));
+        decodeObj.setMessageToDecode(stringtodecode);
+        decodeObj.setKeyToDecode(key);
+        assertEquals(expected, decodeObj.decodeIt());
     }
 
     @Test
@@ -24,7 +26,9 @@ class DecodeTest {
         int key = 2;
         String expected = "HI";
         String stringtodecode = "JK";
-        assertEquals(expected, decodeObj.decodeIt(stringtodecode, key));
+        decodeObj.setMessageToDecode(stringtodecode);
+        decodeObj.setKeyToDecode(key);
+        assertEquals(expected, decodeObj.decodeIt());
     }
 
     @Test
@@ -34,7 +38,9 @@ class DecodeTest {
         int key = 20;
         String expected = "HI";
         String stringtodecode = "BC";
-        assertEquals(expected, decodeObj.decodeIt(stringtodecode, key));
+        decodeObj.setMessageToDecode(stringtodecode);
+        decodeObj.setKeyToDecode(key);
+        assertEquals(expected, decodeObj.decodeIt());
     }
 
     @Test
@@ -44,7 +50,9 @@ class DecodeTest {
         int key = 20;
         String expected = "hi";
         String stringtodecode = "bc";
-        assertEquals(expected, decodeObj.decodeIt(stringtodecode, key));
+        decodeObj.setMessageToDecode(stringtodecode);
+        decodeObj.setKeyToDecode(key);
+        assertEquals(expected, decodeObj.decodeIt());
     }
 
     @Test
@@ -54,6 +62,8 @@ class DecodeTest {
         int key = 2;
         String expected = "hi%lolo";
         String stringtodecode = "jk%nqnq";
-        assertEquals(expected, decodeObj.decodeIt(stringtodecode, key));
+        decodeObj.setMessageToDecode(stringtodecode);
+        decodeObj.setKeyToDecode(key);
+        assertEquals(expected, decodeObj.decodeIt());
     }
 }

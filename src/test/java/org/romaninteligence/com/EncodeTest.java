@@ -14,7 +14,9 @@ class EncodeTest {
         int key = 23;
         String stringtoEncode = "THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG";
         String expectedEncoded = "QEB NRFZH YOLTK CLU GRJMP LSBO QEB IXWV ALD";
-        assertEquals(expectedEncoded, encodeObj.encodeIt(stringtoEncode, key));
+        encodeObj.setMessageToEncode(stringtoEncode);
+        encodeObj.setKeyToEncode(key);
+        assertEquals(expectedEncoded, encodeObj.encodeIt());
     }
 
     @Test
@@ -24,7 +26,9 @@ class EncodeTest {
         int key = 2;
         String stringtoEncode = "HI";
         String expectedEncoded = "JK";
-        assertEquals(expectedEncoded, encodeObj.encodeIt(stringtoEncode, key));
+        encodeObj.setMessageToEncode(stringtoEncode);
+        encodeObj.setKeyToEncode(key);
+        assertEquals(expectedEncoded, encodeObj.encodeIt());
     }
 
     @Test
@@ -34,7 +38,9 @@ class EncodeTest {
         int key = 20;
         String stringtoEncode = "HI";
         String expectedEncoded = "BC";
-        assertEquals(expectedEncoded, encodeObj.encodeIt(stringtoEncode, key));
+        encodeObj.setMessageToEncode(stringtoEncode);
+        encodeObj.setKeyToEncode(key);
+        assertEquals(expectedEncoded, encodeObj.encodeIt());
     }
 
     @Test
@@ -44,7 +50,9 @@ class EncodeTest {
         int key = 20;
         String stringtoEncode = "hi";
         String expectedEncoded = "bc";
-        assertEquals(expectedEncoded, encodeObj.encodeIt(stringtoEncode, key));
+        encodeObj.setMessageToEncode(stringtoEncode);
+        encodeObj.setKeyToEncode(key);
+        assertEquals(expectedEncoded, encodeObj.encodeIt());
     }
 
     @Test
@@ -54,7 +62,9 @@ class EncodeTest {
         int key = 2;
         String stringtoEncode = "hi%lolo";
         String expectedEncoded = "jk%nqnq";
-        assertEquals(expectedEncoded, encodeObj.encodeIt(stringtoEncode, key));
+        encodeObj.setMessageToEncode(stringtoEncode);
+        encodeObj.setKeyToEncode(key);
+        assertEquals(expectedEncoded, encodeObj.encodeIt());
     }
 
 }

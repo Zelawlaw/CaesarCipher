@@ -1,12 +1,23 @@
 package org.romaninteligence.com;
 
+import lombok.AccessLevel;
+import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
+
 import java.util.HashMap;
 import java.util.Map;
 
-
+@Data
 public class Encode {
     static final String REG_ALPHABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+    @Getter(AccessLevel.NONE)
+    @Setter(AccessLevel.NONE)
     Map<Integer, Character> letterposition;
+
+    private String messageToEncode;
+    private int keyToEncode;
 
     public Encode() {
         //initialize letterposition on object creation
@@ -16,7 +27,9 @@ public class Encode {
         }
     }
 
-    public String encodeIt(String message, int key) {
+    public String encodeIt() {
+        String message = this.getMessageToEncode();
+        int key = this.getKeyToEncode();
         String encodedMessage = " ";
         StringBuilder sb = new StringBuilder();
         char[] messagechars = message.toCharArray();
