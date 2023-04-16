@@ -6,4 +6,9 @@ import lombok.NoArgsConstructor;
 public class Encode {
 
 
+    public String encodeIt(String message, int key){
+      String encodedMessage= " ";
+
+      return encodedMessage;
+    }
 }
