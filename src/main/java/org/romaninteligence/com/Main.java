@@ -6,6 +6,7 @@ public class Main {
     public static void main(String[] args) {
 
         Scanner in = new Scanner(System.in);
+
         Encode encodeObj = new Encode();
         Decode decodeObj = new Decode();
         boolean keepWorking = true;
@@ -17,9 +18,12 @@ public class Main {
             try {
                 switch (stage) {
                     case 0:
-                        System.out.println("\nWould you like to encode or decode? press 'e' for encode and 'd' for decode.\n" +
+                        System.out.println("\nWould you like to encode or decode? press 'e' for encode and 'd' for decode." +
                                 "press x to exit");
+                        System.out.println("has next lines: "+in.hasNext());
+                      //  in.nextLine();
                         String action = in.nextLine();
+
                         if (action.equalsIgnoreCase("e")) {
                             stage = 1;
                         } else if (action.equalsIgnoreCase("d")) {
@@ -28,7 +32,7 @@ public class Main {
                             System.out.println("Exiting system. good bye!");
                             keepWorking = false;
                         } else {
-                            System.out.println("wrong input!");
+                            System.out.println("wrong input!"+action.length()+" here");
                         }
                         break;
 
@@ -51,9 +55,10 @@ public class Main {
                         key = in.nextInt();
                         encodeObj.setKeyToEncode(key);
                         encodeObj.setMessageToEncode(message);
-                        System.out.println("Encoded message is :\n");
+                        System.out.println("Encoded message is :");
                         System.out.println(encodeObj.encodeIt());
                         stage = 0;
+                        in.reset();
                         break;
 
                     case 4:
@@ -65,7 +70,8 @@ public class Main {
                         System.out.println("Decoded message is :\n");
                         System.out.println(decodeObj.decodeIt());
                         stage = 0;
-                        break;
+                        in.reset();
+                       break;
 
                 }
 
